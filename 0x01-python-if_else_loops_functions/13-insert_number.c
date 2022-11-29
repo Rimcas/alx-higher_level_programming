@@ -11,7 +11,7 @@
  * Return: address of the new node or NULL if failed
  */
 listint_t *insert_node(listint_t **head, int number)
-	listint_t *ins;
+{	listint_t *ins;
 	listint_t *ptr;
 
 	ptr = *head;
@@ -27,7 +27,7 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = ins;
 		return (ins);
 	}
-	
+
 	while (ptr && ptr->next &&  ptr->next->n < number)
 		ptr = ptr->next;
 
